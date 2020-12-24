@@ -2,7 +2,7 @@ import streamlit as st
 
 st.title("st.form")
 
-with st.beta_form():
+with st.sidebar.beta_form():
     checkbox_val = st.checkbox("checkbox")
     color_val = st.color_picker("color")
     # file = st.file_uploader("file")
@@ -10,11 +10,10 @@ with st.beta_form():
     number_val = st.number_input("number")
     radio_val = st.radio("radio", ["floo", "blar", "blaz"])
     selectslider_val = st.select_slider("select_slider", ["red", "yeller", "blue"])
-    with st.beta_form():
-        selectbox_val = st.selectbox("selectbox", ["choco", "vanilli", "berry"])
-        slider_val = st.slider("slider")
-        textinput_val = st.text_input("text_input")
-        textarea_val = st.text_area("text_area")
+    selectbox_val = st.selectbox("selectbox", ["choco", "vanilli", "berry"])
+    slider_val = st.slider("slider")
+    textinput_val = st.text_input("text_input")
+    textarea_val = st.text_area("text_area")
 
 st.markdown("---")
 
