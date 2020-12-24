@@ -10,10 +10,11 @@ with st.beta_form():
     number_val = st.number_input("number")
     radio_val = st.radio("radio", ["floo", "blar", "blaz"])
     selectslider_val = st.select_slider("select_slider", ["red", "yeller", "blue"])
-    selectbox_val = st.selectbox("selectbox", ["choco", "vanilli", "berry"])
-    slider_val = st.slider("slider")
-    textinput_val = st.text_input("text_input")
-    textarea_val = st.text_area("text_area")
+    with st.beta_form():
+        selectbox_val = st.selectbox("selectbox", ["choco", "vanilli", "berry"])
+        slider_val = st.slider("slider")
+        textinput_val = st.text_input("text_input")
+        textarea_val = st.text_area("text_area")
 
 st.markdown("---")
 
